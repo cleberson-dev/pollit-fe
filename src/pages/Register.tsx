@@ -6,6 +6,7 @@ import {
   TouchableOpacity,
 } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
+import { Header } from "../components/Header";
 
 export const RegisterPage = (): JSX.Element => {
   return (
@@ -15,7 +16,7 @@ export const RegisterPage = (): JSX.Element => {
       end={{ x: 1, y: 1 }}
       style={styles.container}
     >
-      <Text style={styles.title}>PollingApp</Text>
+      <Header />
 
       <Text>Registre-se!</Text>
       <Text>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </Text>
@@ -45,11 +46,7 @@ export const RegisterPage = (): JSX.Element => {
 const styles = StyleSheet.create({
   container: {
     padding: 16,
+    paddingTop: 32,
     flex: 1,
-  },
-  title: {
-    color: "white",
-    fontSize: 32,
-    fontFamily: "LondrinaSolidLight",
   },
 });

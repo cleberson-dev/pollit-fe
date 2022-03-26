@@ -5,10 +5,16 @@ import {
   TextInput,
   TouchableOpacity,
 } from "react-native";
+import { LinearGradient } from "expo-linear-gradient";
 
 export const RegisterPage = (): JSX.Element => {
   return (
-    <View style={styles.container}>
+    <LinearGradient
+      colors={["#667EEA", "#764BA2"]}
+      start={{ x: 0, y: 0 }}
+      end={{ x: 1, y: 1 }}
+      style={styles.container}
+    >
       <Text style={styles.title}>PollingApp</Text>
 
       <Text>Registre-se!</Text>
@@ -32,14 +38,13 @@ export const RegisterPage = (): JSX.Element => {
       <Text>
         Já é membro? <Text>Faça Login</Text>
       </Text>
-    </View>
+    </LinearGradient>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
     padding: 16,
-    backgroundColor: "purple",
     flex: 1,
   },
   title: {

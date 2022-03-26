@@ -1,9 +1,37 @@
-import { View, Text, StyleSheet } from "react-native";
+import {
+  View,
+  Text,
+  StyleSheet,
+  TextInput,
+  TouchableOpacity,
+} from "react-native";
 
 export const RegisterPage = (): JSX.Element => {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Register Page</Text>
+      <Text style={styles.title}>PollingApp</Text>
+
+      <Text>Registre-se!</Text>
+      <Text>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </Text>
+
+      <Text>Preencha os campos</Text>
+
+      <Text>Nome de usuário</Text>
+      <TextInput />
+
+      <Text>Senha</Text>
+      <TextInput />
+
+      <Text>Redigite sua senha</Text>
+      <TextInput />
+
+      <TouchableOpacity>
+        <Text>Criar conta</Text>
+      </TouchableOpacity>
+
+      <Text>
+        Já é membro? <Text>Faça Login</Text>
+      </Text>
     </View>
   );
 };

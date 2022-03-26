@@ -13,5 +13,6 @@ const styles = StyleSheet.create({
   text: {
     color: "white",
     fontFamily: "MontserratRegular",
+    fontSize: 14,
   },
 });

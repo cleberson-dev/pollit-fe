@@ -44,5 +44,7 @@ const styles = StyleSheet.create({
   },
   title: {
     color: "white",
+    fontSize: 32,
+    fontFamily: "MontserratMedium",
   },
 });

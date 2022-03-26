@@ -1,15 +1,8 @@
-import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View } from "react-native";
+import { RegisterPage } from "./src/pages/Register";
 
 export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text style={styles.logo}>
-        cleberson<Text style={styles.logoSecond}>.dev</Text>
-      </Text>
-      <StatusBar style="light" />
-    </View>
-  );
+  return <RegisterPage />;
 }
 
 const styles = StyleSheet.create({

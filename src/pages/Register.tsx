@@ -1,15 +1,9 @@
-import {
-  View,
-  Text,
-  StyleSheet,
-  TextInput,
-  TouchableOpacity,
-  Image,
-} from "react-native";
+import { View, Text, StyleSheet, Image } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
 import { Header } from "../components/Header";
 import { Paragraph } from "../components/Paragraph";
 import { Button } from "../components/Button";
+import { Input } from "../components/Input";
 
 export const RegisterPage = (): JSX.Element => {
   return (
@@ -37,13 +31,13 @@ export const RegisterPage = (): JSX.Element => {
         <Text style={styles.formTitle}>Preencha os campos</Text>
 
         <Text style={styles.inputLabel}>Nome de usuário</Text>
-        <TextInput style={styles.inputField} />
+        <Input />
 
         <Text style={styles.inputLabel}>Senha</Text>
-        <TextInput style={styles.inputField} />
+        <Input />
 
         <Text style={styles.inputLabel}>Redigite sua senha</Text>
-        <TextInput style={styles.inputField} />
+        <Input />
 
         <Button title="Criar conta" style={{ alignSelf: "flex-start" }} />
 
@@ -98,11 +92,5 @@ const styles = StyleSheet.create({
   inputLabel: {
     fontFamily: "MontserratBold",
     marginBottom: 8,
-  },
-  inputField: {
-    backgroundColor: "#F3F3F4",
-    borderRadius: 5,
-    padding: 4,
-    marginBottom: 20,
   },
 });

@@ -98,7 +98,6 @@ const styles = StyleSheet.create({
     display: "flex",
     flexDirection: "row",
     justifyContent: "space-between",
-    flexWrap: "wrap",
     marginVertical: 20,
     paddingHorizontal: 16,
   },
@@ -109,7 +108,7 @@ const styles = StyleSheet.create({
   },
   descriptionText: {
     flex: 0,
-    width: 200,
+    width: 165,
   },
   card: {
     backgroundColor: "white",
@@ -118,6 +117,7 @@ const styles = StyleSheet.create({
     borderTopLeftRadius: 10,
     borderTopRightRadius: 10,
     justifyContent: "space-between",
+    flex: 1,
   },
   formTitle: {
     fontFamily: "MontserratMedium",

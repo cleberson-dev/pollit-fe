@@ -9,6 +9,7 @@ import {
 import { LinearGradient } from "expo-linear-gradient";
 import { Header } from "../components/Header";
 import { Paragraph } from "../components/Paragraph";
+import { Button } from "../components/Button";
 
 export const RegisterPage = (): JSX.Element => {
   return (
@@ -44,13 +45,14 @@ export const RegisterPage = (): JSX.Element => {
         <Text style={styles.inputLabel}>Redigite sua senha</Text>
         <TextInput style={styles.inputField} />
 
-        <TouchableOpacity>
-          <Text>Criar conta</Text>
-        </TouchableOpacity>
+        <Button title="Criar conta" style={{ alignSelf: "flex-start" }} />
 
-        <Text>
-          Já é membro? <Text>Faça Login</Text>
-        </Text>
+        <Paragraph style={{ color: "black", textAlign: "center" }}>
+          Já é membro?{" "}
+          <Text style={{ textDecorationLine: "underline", color: "#FF006E" }}>
+            Faça Login
+          </Text>
+        </Paragraph>
       </View>
     </LinearGradient>
   );

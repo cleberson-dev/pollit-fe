@@ -1,5 +1,4 @@
-import { View, Text, StyleSheet, Image, Alert } from "react-native";
-import { LinearGradient } from "expo-linear-gradient";
+import { View, Text, StyleSheet, Image, Alert, ScrollView } from "react-native";
 import { Header } from "../components/Header";
 import { Paragraph } from "../components/Paragraph";
 import { Button } from "../components/Button";
@@ -17,12 +16,7 @@ export const RegisterPage = (): JSX.Element => {
   const onSubmit = (data: any) => Alert.alert(JSON.stringify(data));
 
   return (
-    <LinearGradient
-      colors={["#667EEA", "#764BA2"]}
-      start={{ x: 0, y: 0 }}
-      end={{ x: 1, y: 1 }}
-      style={styles.container}
-    >
+    <>
       <Header />
 
       <View style={styles.hero}>
@@ -37,7 +31,7 @@ export const RegisterPage = (): JSX.Element => {
         />
       </View>
 
-      <View style={styles.card}>
+      <ScrollView contentContainerStyle={styles.card}>
         <Text style={styles.formTitle}>Preencha os campos</Text>
 
         <View>
@@ -94,16 +88,12 @@ export const RegisterPage = (): JSX.Element => {
             </Text>
           </Paragraph>
         </View>
-      </View>
-    </LinearGradient>
+      </ScrollView>
+    </>
   );
 };
 
 const styles = StyleSheet.create({
-  container: {
-    paddingTop: 32,
-    flex: 1,
-  },
   hero: {
     display: "flex",
     flexDirection: "row",
@@ -123,7 +113,6 @@ const styles = StyleSheet.create({
   },
   card: {
     backgroundColor: "white",
-    flex: 1,
     paddingHorizontal: 16,
     paddingVertical: 20,
     borderTopLeftRadius: 10,

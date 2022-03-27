@@ -3,6 +3,7 @@ import { LinearGradient } from "expo-linear-gradient";
 import { StatusBar } from "expo-status-bar";
 import { StyleSheet } from "react-native";
 import { RegisterPage } from "./src/pages/Register";
+import { sources as fontSources } from "./src/utils/getFonts";
 
 const GradientBackground: React.FC = ({ children }) => {
   return (
@@ -18,13 +19,7 @@ const GradientBackground: React.FC = ({ children }) => {
 };
 
 export default function App() {
-  const [loaded] = useFonts({
-    MontserratRegular: require("./assets/fonts/Montserrat-Regular.ttf"),
-    MontserratMedium: require("./assets/fonts/Montserrat-Medium.ttf"),
-    MontserratSemiBold: require("./assets/fonts/Montserrat-SemiBold.ttf"),
-    MontserratBold: require("./assets/fonts/Montserrat-Bold.ttf"),
-    LondrinaSolidLight: require("./assets/fonts/LondrinaSolid-Light.ttf"),
-  });
+  const [loaded] = useFonts(fontSources);
 
   if (!loaded) return null;
 

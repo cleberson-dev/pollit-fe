@@ -4,6 +4,7 @@ import { Paragraph } from "../components/Paragraph";
 import { Button } from "../components/Button";
 import { Input } from "../components/Input";
 import { Controller, useForm } from "react-hook-form";
+import { fonts } from "../utils/getFonts";
 
 export const RegisterPage = (): JSX.Element => {
   const { control, handleSubmit } = useForm({
@@ -102,7 +103,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 16,
   },
   descriptionTitle: {
-    fontFamily: "MontserratBold",
+    fontFamily: fonts.MontserratBold,
     fontSize: 28,
     marginBottom: 4,
   },
@@ -120,14 +121,14 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   formTitle: {
-    fontFamily: "MontserratMedium",
+    fontFamily: fonts.MontserratMedium,
     letterSpacing: 2,
     textTransform: "uppercase",
     textAlign: "center",
     marginBottom: 20,
   },
   inputLabel: {
-    fontFamily: "MontserratBold",
+    fontFamily: fonts.MontserratBold,
     marginBottom: 8,
   },
 });

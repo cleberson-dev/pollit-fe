@@ -30,23 +30,32 @@ export const RegisterPage = (): JSX.Element => {
       <View style={styles.card}>
         <Text style={styles.formTitle}>Preencha os campos</Text>
 
-        <Text style={styles.inputLabel}>Nome de usuário</Text>
-        <Input />
+        <View>
+          <Text style={styles.inputLabel}>Nome de usuário</Text>
+          <Input />
 
-        <Text style={styles.inputLabel}>Senha</Text>
-        <Input />
+          <Text style={styles.inputLabel}>Senha</Text>
+          <Input />
 
-        <Text style={styles.inputLabel}>Redigite sua senha</Text>
-        <Input />
+          <Text style={styles.inputLabel}>Redigite sua senha</Text>
+          <Input />
 
-        <Button title="Criar conta" style={{ alignSelf: "flex-start" }} />
+          <Button
+            title="Criar conta"
+            style={{ alignSelf: "flex-start", paddingHorizontal: 23 }}
+          />
+        </View>
 
-        <Paragraph style={{ color: "black", textAlign: "center" }}>
-          Já é membro?{" "}
-          <Text style={{ textDecorationLine: "underline", color: "#FF006E" }}>
-            Faça Login
-          </Text>
-        </Paragraph>
+        <View>
+          <Paragraph
+            style={{ color: "black", textAlign: "center", marginTop: 8 }}
+          >
+            Já é membro?{" "}
+            <Text style={{ textDecorationLine: "underline", color: "#FF006E" }}>
+              Faça Login
+            </Text>
+          </Paragraph>
+        </View>
       </View>
     </LinearGradient>
   );
@@ -81,6 +90,7 @@ const styles = StyleSheet.create({
     paddingVertical: 20,
     borderTopLeftRadius: 10,
     borderTopRightRadius: 10,
+    justifyContent: "space-between",
   },
   formTitle: {
     fontFamily: "MontserratMedium",

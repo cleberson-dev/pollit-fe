@@ -1,11 +1,21 @@
-import { View, Text, StyleSheet, Image } from "react-native";
+import { View, Text, StyleSheet, Image, Alert } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
 import { Header } from "../components/Header";
 import { Paragraph } from "../components/Paragraph";
 import { Button } from "../components/Button";
 import { Input } from "../components/Input";
+import { Controller, useForm } from "react-hook-form";
 
 export const RegisterPage = (): JSX.Element => {
+  const { control, handleSubmit } = useForm({
+    defaultValues: {
+      username: "",
+      password: "",
+      repeatedPassword: "",
+    },
+  });
+  const onSubmit = (data: any) => Alert.alert(JSON.stringify(data));
+
   return (
     <LinearGradient
       colors={["#667EEA", "#764BA2"]}
@@ -32,17 +42,45 @@ export const RegisterPage = (): JSX.Element => {
 
         <View>
           <Text style={styles.inputLabel}>Nome de usuário</Text>
-          <Input />
+          <Controller
+            name="username"
+            control={control}
+            rules={{
+              required: true,
+            }}
+            render={({ field: { onChange, onBlur, value } }) => (
+              <Input onBlur={onBlur} onChangeText={onChange} value={value} />
+            )}
+          />
 
           <Text style={styles.inputLabel}>Senha</Text>
-          <Input />
+          <Controller
+            name="password"
+            control={control}
+            rules={{
+              required: true,
+            }}
+            render={({ field: { onChange, onBlur, value } }) => (
+              <Input onBlur={onBlur} onChangeText={onChange} value={value} />
+            )}
+          />
 
           <Text style={styles.inputLabel}>Redigite sua senha</Text>
-          <Input />
+          <Controller
+            name="repeatedPassword"
+            control={control}
+            rules={{
+              required: true,
+            }}
+            render={({ field: { onChange, onBlur, value } }) => (
+              <Input onBlur={onBlur} onChangeText={onChange} value={value} />
+            )}
+          />
 
           <Button
             title="Criar conta"
             style={{ alignSelf: "flex-start", paddingHorizontal: 23 }}
+            onPress={handleSubmit(onSubmit)}
           />
         </View>
 
